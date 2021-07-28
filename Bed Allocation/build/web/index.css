@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --red:#FF4F5B;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition:all .3s cubic-bezier(.16,.8,.62,1.52);
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--red);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #000;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--red);
+}
+
+body{
+    background:#f9f9f9;
+}
+
+section{
+    min-height: 100vh;
+    padding:0 7%;
+    padding-top: 9rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:1rem 4rem;
+    border-radius: 5rem;
+    background: var(--red);
+    color:#fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    font-size: 1.7rem;
+}
+
+.btn::before{
+    content:'';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background:#444;
+    clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+    transition:.3s linear;
+}
+
+.btn:hover::before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+
+header{
+    width:100%;
+    background: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:2.5rem 7%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color:#666;
+}
+.allocate{
+
+    color: rgba(223, 223, 223, 0.897);
+    font-size: 2rem;
+    position: absolute;
+    top: 3rem;
+    left: 14rem;
+}
+.heading{
+font-size: 3rem;
+
+}
+
+.heading span{
+
+color: red;
+
+}
+
+
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin-left: 2.5rem;
+}
+
+header .navbar ul li a{
+    color:#999;
+    font-size: 2rem;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color:var(--red);
+    border-bottom: .2rem solid var(--red);
+    padding:.7rem 0;
+}
+
+#menu{
+    font-size: 3rem;
+    color:#999;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.click{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+
+}
+.clickreg{
+    position: absolute;
+    top: 17rem;
+    right: 51rem;
+    text-decoration: underline;
+    color: #e00000;
+    font-size: 2.5rem;
+
+}
+
+.protect .heading{
+    text-align: center;
+    padding:1rem;
+}
+
+.protect .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.protect .box-container .box{
+    background:#fff;
+    border:.1rem solid rgba(0,0,0,.1);
+    padding:2rem;
+    margin:2rem;
+    width:34rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.protect .box-container .box img{
+    height: 17rem;
+    width:17rem;
+}
+
+.protect .box-container .box h3{
+    font-size: 2.5rem;
+    color:#666;
+    padding:1rem 0;
+}
+
+.protect .box-container .box p{
+    font-size: 1.4rem;
+    color:#999;
+    padding:.5rem;
+}
+
+.protect .box-container .box:hover{
+    transform:translateY(-1rem);
+}
+
+
+.prevent{
+    background:#222;
+}
+
+.prevent .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.prevent .row .image{
+    flex:1 1 37rem;
+    height:35rem;
+    text-align: center;
+}
+
+.prevent .row .image img{
+    height:110%;
+    width:100%;
+    object-fit: cover;
+}
+
+.prevent .row .content{
+    padding:2rem 0;
+    flex:1 1 37rem;
+}
+
+.prevent .row .content .heading{
+    color:#fff;
+}
+
+.prevent .row .content p{
+    font-size: 1.7rem;
+    color:#aaa;
+    padding:1rem 0;
+}
+
+.prevent .row .content ul li{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    color:#aaa;
+    padding:2.5rem 0;
+}
+
+.breath .heading{
+    text-align: center;
+    padding:1rem;
+}
+
+.breath .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.breath .box-container .box{
+    background:#fff;
+    border:.1rem solid rgba(0,0,0,.1);
+    margin:2rem;
+    margin-top: 3rem;
+    padding:2rem 3.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.breath .box-container .box img{
+    height:17rem;
+    width:19rem;
+}
+
+.breath .box-container .box h3{
+    font-size: 2rem;
+    color:#666;
+    padding:1rem 0;
+}
+
+.breath .box-container .box span{
+    display: block;
+    position: absolute;
+    top:-2rem; left:-2rem;
+    height:5rem; width:5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    background:var(--red);
+    border-radius: 5rem;
+}
+
+
+
+.footer{
+    min-height: auto;
+    padding-top: 0;
+    background:rgb(26, 26, 26);
+    text-align: center;
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+    margin:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:rgb(214, 55, 55);
+    padding-bottom: 2rem;
+    font-weight: normal;
+  
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color:#ccc;
+    padding:1rem 0;
+}
+
+.footer .box-container .box p i{
+    padding-right: 1rem;
+    color: var(--red);
+}
+
+.footer .box-container .box a{
+    font-size: 1.5rem;
+    color: #ccc;
+    padding: 1rem 0;
+    display: block;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--red);
+}
+
+.footer .box-container .box .share{
+    display: flex;
+    flex-wrap: wrap;
+    padding:1rem 0;
+}
+
+.footer .box-container .box .share a{
+    height:4rem;
+    width:4rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 5rem;
+    border:.1rem solid #fff3;
+    margin-right: 1rem;
+    
+}
+
+.footer .box-container .box .share a:hover{
+    background:#fff;
+}
+
+.footer .credit{
+    padding:2rem 1rem;
+    text-align: center;
+    color:#fff;
+    font-weight: normal;
+    font-size: 2rem;
+    border-top: .1rem solid #fff3;
+}
+
+.footer .credit a{
+    color:var(--red);
+}
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:8rem; left:-120%;
+        height: 100%;
+        width:100%;
+        background:#eee;
+        border-top: .2rem solid rgba(0,0,0,.1);
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding:2rem;
+    }
+
+    header .navbar ul li{
+        text-align: center;
+        width:100%;
+        margin:1rem 0;
+    }
+
+    header .navbar ul li a{
+        display: block;
+        padding:1rem;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover{
+        padding:1rem;
+        background:var(--red);
+        color:#fff;
+        border:none;
+        border-radius: 5rem;
+    }
+
+z
+
+    header .navbar.nav-toggle{
+        left:0;
+    }
+
+    .home .content{
+        text-align: center;
+    }
+
+    .prevent .row:last-child{
+        flex-flow: column-reverse;
+    }
+
+}
+
+@media (max-width:500px){
+
+    html{
+        font-size: 50%;
+    }
+
+    section{
+        padding:0 3%;
+        padding-top: 9rem;
+    }
+
+}
+
+.login2 {
+    background-color: #FFFFFF;
+width: 300px;
+height: 316px;
+margin: 7em auto;
+border-radius: 1.5em;
+box-shadow: 0px 11px 35px 2px rgb(0 0 0 / 32%);
+position: absolute;
+top: 19rem;
+right: 52rem;
+}
+
+.sign {
+    padding-top: 40px;
+    color: #db4040;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+    padding-top: 40px;
+}
+
+.pass {
+        width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+}
+
+.submit {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #b02727, #fb4059);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.logo img{
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
+    width: 11rem;
+
+}
+.section-1{
+    
+    
+    display: flex;
+    justify-content: center;
+}
+.para{
+    
+    padding: 20px;
+    
+}
+.reghead{
+    
+     font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 15vh;
+    font-size: 3rem;
+}
+.regform{
+    
+    position: absolute;
+    top: 27vh;
+    padding: 30px;
+    font-size: 2rem;
+    border-radius: 20px;
+    background-color: white;
+    border: 2px solid rgb(255 255 255 / 57%);
+    box-shadow: 0px 11px 35px 2px rgb(5 5 5 / 69%);
+    
+}
+
+.reg{
+       padding: 10px 20px;
+    position: relative;
+    right: -22vh;
+    top: 1vh;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 11px 35px 2px rgb(0 0 0 / 10%);
+    text-align: center;
+    
+    
+}
+#reg-btn{
+    background-color: rgb(43, 214, 252);
+    color:#fafafa;
+}
+
