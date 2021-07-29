@@ -212,6 +212,19 @@
             </form>
 
         </div>
+        <script type="text/javascript">
+            function send(){
+                Email.send({
+                SecureToken:"6b2673ff-e43b-4f0a-b572-2f6fc8335a6d ",
+                To : document.getElementById('to').value,
+                From : "covidbedallotment099@gmail.com",
+                Subject : "Form Submission",
+                Body : "<html>"+document.getElementById('to').value+"<br>good evening.</html>"
+            }).then(
+              console.log("email sent sucessfully")
+            );
+            }
+        </script>
       
         
     </body>
