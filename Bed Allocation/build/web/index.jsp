@@ -1,18 +1,63 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Bed Allocation</title>
-    <link rel="shortcut icon" type="image" href="./images/logo.png">
 
    
     <link rel="stylesheet" href="index.css">
 
 </head>
 <body>
+    <%
+        String msg = "";
+        if("post".equalsIgnoreCase(request.getMethod()))
+        {
+             String un = request.getParameter("username");
+    String area = "";
+    if(un.contains("Yelahanka"))
+    {
+        area = "Yelahanka";
+        
+    }
+    else if (un.contains("Jalahalli"))
+    {
+        area = "Jalahalli";
+        
+    }
+    else if (un.contains("Yeshwantpur"))
+    {
+        area = "Yeshwantpur";
+      
+    }
+    else if (un.contains("Whitefield"))
+    {
+        area = "Whitefield";
+      
+    }
+    else
+    {
+        
+         msg = "Enter valid credentials";
+        
+      
+        
+    }
+   if(area!="" && area!=null)
+   {
+       session.setAttribute("session", area);
+       response.sendRedirect("hospital.jsp?area="+area);
+       
+   }
+            
+        }
+       
+    %>
     
-
+   
 
 <header>
 
@@ -24,27 +69,31 @@
     <nav class="navbar">
         <ul>
             <li><a class="active" href="index.jsp">Home</a></li>
-            <li><a href="#">Bed Status</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="status.jsp">Bed Status</a></li>
+            <li><a href="https://www.powerbi.com/view?r=eyJrIjoiOTcyM2JkNTQtYzA5ZS00MWI4LWIxN2UtZjY1NjFhYmFjZDBjIiwidCI6ImQ1ZmE3M2I0LTE1MzgtNGRjZi1hZGIwLTA3NGEzNzg4MmRkNiJ9" target="_blank" >BBMP bed tracker</a></li>
             
         </ul>
     </nav>
 
 </header>
+    <img class="bgimg" src="images/bg3.jpeg" alt="">
 
 
 <section class="click">
-<a  href="register.jsp"><h1 class="clickreg">Click Here for registration</h1></a>
+    
+   
+<a  href="register.jsp"><h1 class="clickreg">Click Here for Bed Registration</h1></a>
 </form>
 
     
 <div class="login2">
     <p class="sign" align="center">Hospital Login</p>
-    <form class="form1" action="#" method="post" >
-      <input class="un " type="text" align="center" name="username" placeholder="Username">
-      <input class="pass" type="password" align="center" name="password" placeholder="Password">
+    <form class="form1"  method="post" >
+      <input required class="un " type="text" align="center" name="username" placeholder="Username">
+      <input required class="pass" type="password" align="center" name="password" placeholder="Password">
+      <h3 class="loginfail"> <%=msg%></h3>
       
-      <input class="submit" align="center" type="submit" value="Sign In">
+      <input class="submitform" align="center" type="submit" value="Sign In">
     </form>
 
 
@@ -171,10 +220,10 @@
             
             <h3>Useful Links</h3>
             
-                <a href="https://www.who.int/">WHO</a>
-                <a href="https://selfregistration.cowin.gov.in/">COWIN Portal</a>
-                <a href="https://bbmp.gov.in/indexenglish.html">BBMP</a>
-                <a href="https://www.covidwar.karnataka.gov.in/service1">Covid Test Reports</a>
+                <a href="https://www.who.int/" target="_blank">WHO</a>
+                <a href="https://selfregistration.cowin.gov.in/" target="_blank">COWIN Portal</a>
+                <a href="https://bbmp.gov.in/indexenglish.html" target="_blank">BBMP</a>
+                <a href="https://www.covidwar.karnataka.gov.in/service1" target="_blank">Covid Test Reports</a>
                 
             </div>
         
