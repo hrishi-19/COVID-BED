@@ -41,9 +41,10 @@ body{
 }
 
 section{
-    min-height: 100vh;
-    padding:0 7%;
-    padding-top: 9rem;
+    min-height: 65rem;
+    padding: 0px 5%;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
 }
 
 .btn{
@@ -103,7 +104,8 @@ header .logo{
     left: 14rem;
 }
 .heading{
-font-size: 3rem;
+font-size: 4rem;
+    height: 10rem;
 
 }
 
@@ -158,7 +160,7 @@ header .navbar ul li a:hover{
 .clickreg{
     position: absolute;
     top: 17rem;
-    right: 51rem;
+    right: 58rem;
     text-decoration: underline;
     color: #e00000;
     font-size: 2.5rem;
@@ -229,9 +231,8 @@ header .navbar ul li a:hover{
 }
 
 .prevent .row .image img{
-    height:110%;
-    width:100%;
-    object-fit: cover;
+        height: 124%;
+    width: 100%;
 }
 
 .prevent .row .content{
@@ -250,10 +251,10 @@ header .navbar ul li a:hover{
 }
 
 .prevent .row .content ul li{
-    margin-left: 2rem;
-    font-size: 1.5rem;
-    color:#aaa;
-    padding:2.5rem 0;
+        margin-left: 2rem;
+    font-size: 2rem;
+    color: #aaa;
+    padding: 2.5rem 0;
 }
 
 .breath .heading{
@@ -475,7 +476,7 @@ border-radius: 1.5em;
 box-shadow: 0px 11px 35px 2px rgb(0 0 0 / 32%);
 position: absolute;
 top: 19rem;
-right: 52rem;
+right: 62rem;
 }
 
 .sign {
@@ -536,20 +537,23 @@ font-family: 'Ubuntu', sans-serif;
     
 }
 
-.submit {
-  cursor: pointer;
+.submitform {
+      cursor: pointer;
+    position: absolute;
+    right: 7.5rem;
+    top: 25rem;
     border-radius: 5em;
     color: #fff;
     background: linear-gradient(to right, #b02727, #fb4059);
     border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 41px;
+    padding-right: 44px;
     padding-bottom: 10px;
     padding-top: 10px;
     font-family: 'Ubuntu', sans-serif;
     margin-left: 35%;
     font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 5px 0px rgb(0 0 0 / 60%);
 }
 
 .logo img{
@@ -587,23 +591,154 @@ font-family: 'Ubuntu', sans-serif;
     background-color: white;
     border: 2px solid rgb(255 255 255 / 57%);
     box-shadow: 0px 11px 35px 2px rgb(5 5 5 / 69%);
+        height: 102rem;
     
 }
 
 .reg{
        padding: 10px 20px;
     position: relative;
-    right: -22vh;
-    top: 1vh;
+    right: -10vh;
+    top: 0vh;
     border: none;
     border-radius: 10px;
     box-shadow: 0px 11px 35px 2px rgb(0 0 0 / 10%);
     text-align: center;
     
+}
+.gen{
+    position: absolute;
+    top: 31rem;
+    right: 5.5rem;
+    
     
 }
-#reg-btn{
-    background-color: rgb(43, 214, 252);
-    color:#fafafa;
+.yes{
+    position: absolute;
+    right: 7rem;
+    padding: 1.5rem;
+    
+}
+.submitform2{
+    
+    position: absolute;
+    bottom: 3rem;
+    right: 28rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    width: 11rem;
+    height: 4rem;
+    font-size: 2rem;
+    background-color: #ece5e5b3;
+    box-shadow: 1px 3px 13px 0px rgb(0 0 0 / 68%);
+    
 }
 
+.bgimg{
+    
+    width: 158rem;
+    height: 74rem;
+    position: absolute;
+    top: -3rem;
+    right: 0rem;
+    
+    
+}
+.regout{
+   font-size: 4rem;
+    position: absolute;
+    top: 40rem;
+    right: 27rem;
+    text-align: center;
+}
+
+.asset{
+	height: 32rem;
+	width: 35%;
+	position: absolute;
+	left:15rem;
+
+    top: 27vh;
+    padding: 30px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background-color: white;
+    border: 2px solid rgb(255 255 255 / 57%);
+    box-shadow: 0px 11px 35px 2px rgb(5 5 5 / 69%);
+}
+.status {
+	    position: absolute;
+    top: 6rem;
+    padding: 2rem;
+    right: 4rem;
+}
+.checkhead{
+    
+    font-size: 2.5rem;
+    position: absolute;
+    right: 14rem;
+}
+.btn1{
+    
+    padding: 1rem;
+    position: absolute;
+    right: 17rem;
+    width: 12rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    bottom: -3rem;
+    box-shadow: 1px 1px 11px 0px rgb(5 5 5 / 41%);
+    
+}
+.tablecheck{
+    
+        padding: 3rem;
+}
+.tablecheckin{
+    
+    padding: 2rem;
+    box-shadow: 1px 1px 11px 0px rgb(5 5 5 / 41%);
+    height: 1rem;
+    border-radius: 2rem;
+}
+.ortxt{
+  position: absolute;
+    top: 15.5rem;
+    right: 26rem;
+    font-size: 1.5rem;
+    
+    
+}
+.data{
+    position: absolute;
+    right: 13rem;
+    top: 20rem;
+    font-size: 2rem;
+    
+}
+.loginfail{
+    color: darkred;
+    position: absolute;
+    right: 7rem;
+    bottom: 7.5rem;
+    
+    
+}
+.data th {
+    
+    border: 1px;
+    padding: 15px;
+    border: 1px solid;
+}
+.details{
+       font-size: 2rem;
+    bottom: 34rem;
+    position: absolute;
+    left: 94rem;
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 11px 35px 2px rgb(5 5 5 / 69%);
+}
