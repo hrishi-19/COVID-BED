@@ -3,7 +3,7 @@
 
 
 ##
-Abstract 
+**Abstract**
 
 
 ######
@@ -15,7 +15,7 @@ and when patients are discharged or allotted. Patients will be allotted the type
 parameters such as CT scores and SPO2 levels mentioned.
 
 ##
-Implementation
+ **Implementation**
 
 ######
 A website is created for the purpose mentioned. It maintains two portals:
@@ -36,7 +36,7 @@ The patient or the attendant has to login to the website and create the patient 
 
 
 ######
- data sheet of the status of patients registered in Yelahanka Government hospital. The details like name, age, serial number, gender, area of residence, SPO2 level, covid result whether positive or negative, EU number Bed Type and discharge status is maintained in this sheet. 
+ Data sheet of the status of patients registered in Yelahanka Government hospital. The details like name, age, serial number, gender, area of residence, SPO2 level, covid result whether positive or negative, EU number Bed Type and discharge status is maintained in this sheet. 
 
 ![This is an image](https://i.ibb.co/fGwrk9f/table.jpg)
 
